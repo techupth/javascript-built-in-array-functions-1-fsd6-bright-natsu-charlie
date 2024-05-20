@@ -5,12 +5,13 @@ const todos = [
   { topic: "Relax", completed: false },
   { topic: "Clean the room", completed: true },
 ];
-function getTodoTopics(item) {
-  return item.topic;
+function getTodoTopics(todos) {
+  return todos.map((AllTopic) => {
+    return AllTopic.topic;
+  });
 }
-const result = todos.map(getTodoTopics);
 
-console.log(result);
+console.log(getTodoTopics(todos));
 
 /* 
 	Output:
